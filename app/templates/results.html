@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 
 {% block title %}
-	Survey
+	Results
 {% endblock %}
 
 {% block header %}
 	{{ super() }}
 	<form action="logout" id="logout">
-		<span id="username">Logged in as {{ name }}</span>
+		<span id="username">Logged in as {{ username }}</span>
 		<input class="action-button" id="logout-button" type="submit" value="Logout">
 	</form>
 {% endblock %}
@@ -21,7 +21,7 @@
 		<span class="result-item">Your favorite food is {{ surveyResponse['food']}}</span>
 		<span class="result-item">Your favorite vacation spot is {{ surveyResponse['vacation']}}</span>
 
-		<h3>Wow! Your front end skillz are getting sharp!</h3>
+		<h3 id="comparison">Wow! Your front end skillz are getting sharp!</h3>
 		<span class="result-item">Before IO Lab, your front end skillz were at a {{ surveyResponse['fe-before']}}</span>
 		<span class="result-item">But in just a few short weeks of IO Lab, your front end skillz are now a {{ surveyResponse['fe-after']}}</span>
 
